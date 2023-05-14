@@ -65,4 +65,4 @@ runs:
         else
           CONFIG="--config ${{ inputs.config }}"
         fi
-        ./kube-linter $CONFIG lint "${{ inputs.directory }}"
+        ./kube-linter $CONFIG lint "${{ inputs.directory }}" >> "$GITHUB_OUTPUT"
