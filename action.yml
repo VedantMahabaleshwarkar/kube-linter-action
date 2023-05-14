@@ -66,4 +66,4 @@ runs:
           CONFIG="--config ${{ inputs.config }}"
         fi
         ./kube-linter $CONFIG lint "${{ inputs.directory }}" --format "${{ inputs.format }}" | tee "${{ inputs.output-file }}" 
-        echo "$(cat kubelinter.log)"
+        echo "scanresult=$(cat "${{ inputs.output-file }}") 
